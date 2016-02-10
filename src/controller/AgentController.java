@@ -9,7 +9,7 @@ import model.AgentModel;
  */
 public class AgentController extends MouseAdapter {
 	
-	AgentModel agentModel;
+	private AgentModel agentModel;
 	
 	public AgentController(AgentModel agentModel) {
 		this.agentModel = agentModel;

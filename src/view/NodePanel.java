@@ -11,8 +11,8 @@ import model.NodeModel;
 /**
  * @author Marijn Scholtens
  * This is the nodepanel on which we draw our objects, like the list of nodes
- * Also we create an nodemodel that keeps track of the constellation of nodes
- * And we create an nodescontroller for panel adaptations
+ * Also we create a nodemodel that keeps track of the constellation of nodes
+ * And we create a nodescontroller for panel adaptations
  */
 @SuppressWarnings("serial")
 public class NodePanel extends JPanel implements Observer {
@@ -22,8 +22,7 @@ public class NodePanel extends JPanel implements Observer {
 	private int fontSize = 14;
 	private String fontType = "Arial";
 	
-	public NodePanel() {
-		nodeModel = new NodeModel();
+	public NodePanel(NodeModel nodeModel) {
 		setNodeModel(nodeModel);
 		nodeController = new NodeController(nodeModel);
 		setNodeController(nodeController);
@@ -42,7 +41,7 @@ public class NodePanel extends JPanel implements Observer {
 		this.nodeModel.addObserver(this);
 	}
 	
-	public NodeModel getDeviceModel() {
+	public NodeModel getNodeModel() {
 		return nodeModel;
 	}
 	

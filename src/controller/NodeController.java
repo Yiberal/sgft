@@ -9,7 +9,7 @@ import model.NodeModel;
  */
 public class NodeController extends MouseAdapter {
 	
-	NodeModel nodeModel;
+	private NodeModel nodeModel;
 	
 	public NodeController(NodeModel nodeModel) {
 		this.nodeModel = nodeModel;
